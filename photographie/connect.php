@@ -34,9 +34,4 @@ try {
 
       $requeteGenre = $dbh->query('SELECT * FROM genre ORDER BY genre ');
 
-    //  $requeteGenrePhoto = $dbh->query('SELECT * FROM photography
-    //    INNER JOIN appartenir
-    //    ON appartenir.ID_photo = photography.ID_photo
-    //    WHERE ID_genre = "'.$_POST["genre_id"].'"');
-
 ?>
