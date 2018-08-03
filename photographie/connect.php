@@ -34,4 +34,8 @@ try {
 
       $requeteGenre = $dbh->query('SELECT * FROM genre ORDER BY genre ');
 
+      $requeteGenrephoto = $dbh->query('SELECT * FROM photography
+                                   INNER JOIN appartenir ON photography.ID_photo = appartenir.ID_photo
+                                   WHERE ID_genre = genre');
+
 ?>
