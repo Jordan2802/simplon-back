@@ -8,7 +8,7 @@
     <title></title>
   </head>
   <body>
-    <form class="" action="" method="post">
+    <form class="formuTrait" action="" method="post">
       <input type="text" name="titre" value="titre"> <br>
       <input type="text" name="portrait" value="portrait"><br>
       <input type="text" name="date" value="date"><br>
@@ -34,9 +34,7 @@ $exposure = $_POST['exposure'];
 
 $dbh->query( "INSERT INTO `photography`(`ID_photo`, `title_photo`, `portrait_photo`, `date_photo`, `camera_photo`, `focal_photo`, `aperture_photo`, `exposure_photo`, `iso_photo`)
              VALUES ('','$title','$portrait','$date','$camera','$focal','$aperture','$exposure','$iso')");
-?>
 
-<?php
 }
  ?>
  <?php

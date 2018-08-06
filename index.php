@@ -1,4 +1,4 @@
-<?php include('connect.php'); ?>
+<?php include('photographie/connect.php'); ?>
 
 <!DOCTYPE html>
 <html lang="fr" class="no-js">
@@ -10,11 +10,11 @@
 	<meta name="description" content="A photography-inspired website layout with an expanding stack slider and a background image tilt effect" />
 	<meta name="keywords" content="photography, template, layout, effect, expand, image stack, animation, flickity, tilt" />
 	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/flickity.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<script src="js/modernizr.custom.js"></script>
+	<link rel="shortcut icon" href="photographie/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="photographie/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="photographie/css/flickity.css" />
+	<link rel="stylesheet" type="text/css" href="photographie/css/main.css" />
+	<script src="photographie/js/modernizr.custom.js"></script>
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 			<div class="hero__front"></div>
 		</div>
 		<header class="codrops-header">
-			<h1 class="codrops-title"><img src="img/logo.png" alt="img01" width="250px"/> <span>Charleville</span></h1>
+			<h1 class="codrops-title"><img src="photographie/img/logo.png" alt="img01" width="250px"/> <span>Charleville</span></h1>
 		</header>
 
 		<!-- Création d'une catégorie -->
@@ -59,17 +59,9 @@
 			 ?>
 		<div class="item">
 		  <div class="item__content">
-				<?php
-				while ($donnees = $requeteGenrephoto->fetch())
-				{
-					$genre =  $donnees["genre"];
-					$IDGenre = $donnees["ID_genre"];
-					$portrait = $donnees['portrait_photo'];
-				 ?>
-		    <img src="img/<?php echo $portrait ?>" alt="<?php echo $portrait ?>" />
-			<?php }
-				 $requeteGenrephoto->closeCursor(); // Termine le traitement de la requête
-			?>
+
+		    <img src="photographie/img/<?php echo $portrait ?>" alt="<?php echo $portrait ?>" />
+			
 		    <h3 class="item__title"><?php echo $titlePhoto  ?> <span class="item__date"><?php echo $date ?></span></h3>
 		    <div class="item__details">
 		      <ul>
@@ -100,8 +92,8 @@
 		</div>
 		<!-- /container -->
 		<!-- Flickity v1.0.0 http://flickity.metafizzy.co/ -->
-		<script src="js/flickity.pkgd.min.js"></script>
-		<script src="js/smoothscroll.js"></script>
-		<script src="js/main.js"></script>
+		<script src="photographie/js/flickity.pkgd.min.js"></script>
+		<script src="photographie/js/smoothscroll.js"></script>
+		<script src="photographie/js/main.js"></script>
 		</body>
 		</html>
