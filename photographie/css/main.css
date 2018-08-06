@@ -51,6 +51,28 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+form{
+	border: 1px solid #fff;
+	padding: 10px;
+	width: 60%;
+	height: auto;
+	margin: auto;
+	margin-top: 40vh;
+	display: flex;
+	flex-direction: column;
+}
+form .button{
+	width: 30%;
+	height: 30px;
+	align-self: center;
+}
+form .annuler{
+	text-align: center;
+	border: 1px solid #fff;
+	width: 30%;
+	padding: 10px;
+	align-self: center;
+}
 a {
 	color: #585558;
 	text-decoration: none;

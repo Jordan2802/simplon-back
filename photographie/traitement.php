@@ -1,23 +1,24 @@
 <?php
- include('Photographie/connect.php');
+ include('connect.php');
  ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title></title>
   </head>
   <body>
-    <form class="formuTrait" action="" method="post">
-      <input type="text" name="titre" value="titre"> <br>
-      <input type="text" name="portrait" value="portrait"><br>
-      <input type="text" name="date" value="date"><br>
-      <input type="text" name="camera" value="camera"><br>
-      <input type="text" name="focal" value="focal"><br>
-      <input type="text" name="aperture" value="aperture"><br>
-      <input type="text" name="exposure" value="exposure"><br>
-      <input type="text" name="iso" value="iso"><br>
-      <input type="submit" name="valider" value="inserer">
+    <form class="formuTrait" action="../index.php" method="post">
+    <label for="titre">titre</label>  <input type="text" name="titre" value=""> <br>
+    <label for="portrait">portrait</label>  <input type="text" name="portrait" value=""><br>
+    <label for="date">date</label>  <input type="text" name="date" value=""><br>
+    <label for="camera">camera</label>  <input type="text" name="camera" value=""><br>
+    <label for="focal">focal</label>  <input type="text" name="focal" value=""><br>
+    <label for="aperture">aperture</label>  <input type="text" name="aperture" value=""><br>
+    <label for="exposure">exposure</label>  <input type="text" name="exposure" value=""><br>
+    <label for="iso">iso</label>  <input type="text" name="iso" value=""><br>
+      <input type="submit" name="valider" class="button" value="inserer"><a href="../index.php" class="annuler">Annuler</a>
     </form>
   </body>
 </html>
@@ -34,13 +35,5 @@ $exposure = $_POST['exposure'];
 
 $dbh->query( "INSERT INTO `photography`(`ID_photo`, `title_photo`, `portrait_photo`, `date_photo`, `camera_photo`, `focal_photo`, `aperture_photo`, `exposure_photo`, `iso_photo`)
              VALUES ('','$title','$portrait','$date','$camera','$focal','$aperture','$exposure','$iso')");
-
 }
- ?>
- <?php
- $foo = 'Pierre';              // Assigne la valeur 'Pierre' à $foo
- $bar = &$foo;                 // Référence $foo avec $bar.
- $bar = "Mon nom est $bar";  // Modifie $bar...
- echo $foo;                    // $foo est aussi modifiée
- echo $bar;
  ?>

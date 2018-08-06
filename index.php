@@ -24,6 +24,7 @@
 			<div class="hero__back hero__back--mover"></div>
 			<div class="hero__front"></div>
 		</div>
+
 		<header class="codrops-header">
 			<h1 class="codrops-title"><img src="photographie/img/logo.png" alt="img01" width="250px"/> <span>Charleville</span></h1>
 		</header>
@@ -61,7 +62,7 @@
 		  <div class="item__content">
 
 		    <img src="photographie/img/<?php echo $portrait ?>" alt="<?php echo $portrait ?>" />
-			
+
 		    <h3 class="item__title"><?php echo $titlePhoto  ?> <span class="item__date"><?php echo $date ?></span></h3>
 		    <div class="item__details">
 		      <ul>
@@ -70,6 +71,7 @@
 		        <li><i class="icon icon-aperture"></i><span>&fnof;/<?php echo $aperture ?></span></li>
 		        <li><i class="icon icon-exposure_time"></i><span><?php echo $exposure ?></span></li>
 		        <li><i class="icon icon-iso"></i><span><?php echo $iso ?></span></li>
+						<li><span><a href="photographie/traitement.php">Ajouter une nouvelle photographie!</a> </span> </li>
 		      </ul>
 		    </div>
 		  </div>
