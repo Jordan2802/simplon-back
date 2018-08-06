@@ -59,7 +59,17 @@
 			 ?>
 		<div class="item">
 		  <div class="item__content">
+				<?php
+				while ($donnees = $requeteGenrephoto->fetch())
+				{
+					$genre =  $donnees["genre"];
+					$IDGenre = $donnees["ID_genre"];
+					$portrait = $donnees['portrait_photo'];
+				 ?>
 		    <img src="img/<?php echo $portrait ?>" alt="<?php echo $portrait ?>" />
+			<?php }
+				 $requeteGenrephoto->closeCursor(); // Termine le traitement de la requête
+			?>
 		    <h3 class="item__title"><?php echo $titlePhoto  ?> <span class="item__date"><?php echo $date ?></span></h3>
 		    <div class="item__details">
 		      <ul>

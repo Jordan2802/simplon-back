@@ -32,10 +32,17 @@ $aperture = $_POST['aperture'];
 $iso = $_POST['iso'];
 $exposure = $_POST['exposure'];
 
-$dbh->exec( "INSERT INTO `photography`(`ID_photo`, `title_photo`, `portrait_photo`, `date_photo`, `camera_photo`, `focal_photo`, `aperture_photo`, `exposure_photo`, `iso_photo`)
+$dbh->query( "INSERT INTO `photography`(`ID_photo`, `title_photo`, `portrait_photo`, `date_photo`, `camera_photo`, `focal_photo`, `aperture_photo`, `exposure_photo`, `iso_photo`)
              VALUES ('','$title','$portrait','$date','$camera','$focal','$aperture','$exposure','$iso')");
 ?>
-<img src="<?php echo $donnees['portrait_photo'] ?>" alt="">
+
 <?php
 }
+ ?>
+ <?php
+ $foo = 'Pierre';              // Assigne la valeur 'Pierre' à $foo
+ $bar = &$foo;                 // Référence $foo avec $bar.
+ $bar = "Mon nom est $bar";  // Modifie $bar...
+ echo $foo;                    // $foo est aussi modifiée
+ echo $bar;
  ?>
