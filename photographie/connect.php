@@ -5,10 +5,10 @@
 ###########################################
 
 
-$host_name = 'localhost';
-$database = 'photography';
-$user_name = 'root';
-$password = '';
+$host_name = 'db745063202.db.1and1.com';
+$database = 'db745063202';
+$user_name = 'dbo745063202';
+$password = '!Jordan018';
 
 $dbh = null;
 try {
